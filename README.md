@@ -79,9 +79,7 @@ $ docker build -t bitnami/mongodb-sharded:latest 'https://github.com/bitnami/bit
 
 If you remove the container all your data will be lost, and the next time you run the image the database will be reinitialized. To avoid this loss of data, you should mount a volume that will persist even after the container is removed.
 
-For persistence you should mount a directory at the /bitnami/mongodb path.
-
-If the mounted directory is empty, it will be initialized on the first run. As this is a non-root container, the mounted files and directories must read/write permissions for the UID 1001
+For persistence you should mount a directory at the /bitnami/mongodb path. If the mounted directory is empty, it will be initialized on the first run. As this is a non-root container, the mounted files and directories must read/write permissions for the UID 1001
 
 ```console
 $ docker run \
